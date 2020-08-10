@@ -17,4 +17,4 @@ openssl x509 -req -days 365 -CA root.crt -CAkey root.key \
 
 # Create Kubernetes secret with the generated credentials above
 kubectl -n istio-system create secret tls online-boutique-tls-credential \
-  --key server.key --cert=server.crt
+  --key=server.key --cert=server.crt
